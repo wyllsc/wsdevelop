@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Template Velocity - Test</title>
+</head>
+<body>
+	<center>
+		<b>Template Velocity Teste Avulso</b>
+		<table border="1" cellpadding="5" cellspacing="5">
+			<thead>
+				#foreach( $item in $pLista )
+				<tr>
+					<td colspan="4">$item.StringMap</td>
+				</tr>
+				<tr>
+					<td>Chave Map</td>
+					<td>Codigo 01</td>
+					<td>Codigo 02</td>
+					<td>Codigo 03</td>
+				</tr>
+			</thead>
+			<tbody>
+				#foreach( $vo in $item.listaHahsMap )
+				<tr>
+					<td>$vo.StringMap</td>
+					<td>$vo.codPrimeiraLeg</td>
+					<td>$vo.codUltimaLeg</td>
+					<td>$vo.codParlamentar</td>
+				</tr>
+				#end
+			</tbody>
+			#end
+		</table>
+	</center>
+</body>
+</html>
